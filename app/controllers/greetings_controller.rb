@@ -3,6 +3,8 @@ class GreetingsController < ApplicationController
   caches_page :hello
 
   def hello
+    Rails.cache.write("test", DateTime.now.to_i.to_s)
+
   	@message = "I'm a Rails #{ Rails::VERSION::STRING } Application"
 
   	ball = Ball.create(:dimples => Random.rand(1000))
