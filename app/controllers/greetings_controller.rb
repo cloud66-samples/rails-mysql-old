@@ -1,7 +1,5 @@
 class GreetingsController < ApplicationController
-  
-  caches_page :hello
-
+ 
   def hello	  
   	@message = "I'm a Rails #{ Rails::VERSION::STRING } Application"
 
