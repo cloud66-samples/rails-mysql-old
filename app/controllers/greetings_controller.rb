@@ -2,7 +2,7 @@ class GreetingsController < ApplicationController
   
   caches_page :hello
 
-  def hello
+  def hello	  
   	@message = "I'm a Rails #{ Rails::VERSION::STRING } Application"
 
   	ball = Ball.create(:dimples => Random.rand(1000))
@@ -14,6 +14,9 @@ class GreetingsController < ApplicationController
 		@balls = @balls + "#{header[0]}: #{header[1]} </br>"
 	end
 	@balls = @balls + "</br>"
+	  
+	  
+	Rails.cache.write("test", DateTime.now.to_i.to_s)  
 
 	@rails_stack_path = ENV['RAILS_STACK_PATH']
   end
