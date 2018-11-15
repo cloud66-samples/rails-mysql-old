@@ -7,6 +7,7 @@ production:
     rails:
         configuration:
             ruby_version: 2.1.5
+            node_version: 11
     environment_variables:
         DATABASE_HOST: changeme
         DATABASE_USERNAME: changeme
