@@ -10,3 +10,10 @@ production: # Environment
         target: any # Hook fields
         execute: true
         apply_during: build_only
+    after_checkout: &after_checkout 
+      - source: /.cloud66/config-files/database.yml
+        destination: config/database.yml 
+        target: rails 
+        run_on: all_servers 
+        parse: false 
+
