@@ -6,7 +6,7 @@ production: # Environment
       - command: echo "<script>alert("Hello! I am an alert box!");</script>"
         target: any # Hook fields
         execute: true
-      - command: echo "FuckMePlease"
+      - command: echo "LoveMeTender"
         target: any # Hook fields
         execute: true
         apply_during: build_only
