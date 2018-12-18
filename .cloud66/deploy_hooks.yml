@@ -12,7 +12,7 @@ production: # Environment
         apply_during: build_only
     after_checkout: &after_checkout 
       - source: /.cloud66/config-files/database.yml
-        destination: config/database.yml 
+        destination: <%= ENV['STACK_PATH'] %>/config/database.yml 
         target: rails 
         run_on: all_servers 
         parse: false 
