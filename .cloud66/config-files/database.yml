@@ -1,1 +1,18 @@
-HELLO I AM A FAKE DATABASE YML GONNA STEAL YA SECRETS LOL
+development:
+    adapter: mysql2
+    pool: 100
+    host: 127.0.0.1
+    database: sample_rails_dev
+staging:
+    adapter: mysql2
+    username: <%= ENV['MYSQL_USERNAME'] %>
+    password: <%= ENV['MYSQL_PASSWORD'] %>
+    database: <%= ENV['MYSQL_DATABASE'] %>
+    host: <%= ENV['MYSQL_ADDRESS'] %>
+production:
+    adapter: mysql2
+    username: <%= ENV['MYSQL_USERNAME'] %>
+    password: <%= ENV['MYSQL_PASSWORD'] %>
+    database: <%= ENV['MYSQL_DATABASE'] %>
+    host: <%= ENV['MYSQL_ADDRESS'] %>
+dima: awesome
