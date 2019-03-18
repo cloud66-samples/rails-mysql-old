@@ -18,3 +18,5 @@ production:
         NEWRELIC_KEY: changeme
         SMTP_USER_NAME: recus@nouvellevie.com
         SMTP_PASSWORD: changeme
+    mysql:
+        version: 8.0
