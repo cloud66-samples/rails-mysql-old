@@ -1,12 +1,12 @@
 staging:
     rails:
         configuration:
-            ruby_version: 2.1.5
+            ruby_version: 2.1.10
 
 production:
     rails:
         configuration:
-            ruby_version: 2.1.5
+            ruby_version: 2.1.10
             node_version: 11
     environment_variables:
         DATABASE_HOST: changeme
