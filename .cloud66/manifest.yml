@@ -1,20 +1,15 @@
-staging:
-    rails:
-        configuration:
-            ruby_version: 2.1.5
-
-production:
-    rails:
-        configuration:
-            ruby_version: 2.1.5
-    environment_variables:
-        DATABASE_HOST: changeme
-        DATABASE_USERNAME: changeme
-        DATABASE_PASSWORD: changeme
-        HOST_PROTOCOL: https
-        HOST_NAME: dons.nouvellevie.com
-        STRIPE_SECRET_KEY: changeme
-        STRIPE_PUBLISHABLE_KEY: changeme
-        NEWRELIC_KEY: changeme
-        SMTP_USER_NAME: recus@nouvellevie.com
-        SMTP_PASSWORD: changeme
+rails:
+    configuration:
+        ruby_version: 2.1.5
+        operating_version: ubuntu1804
+environment_variables:
+    DATABASE_HOST: changeme
+    DATABASE_USERNAME: changeme
+    DATABASE_PASSWORD: changeme
+    HOST_PROTOCOL: https
+    HOST_NAME: dons.nouvellevie.com
+    STRIPE_SECRET_KEY: changeme
+    STRIPE_PUBLISHABLE_KEY: changeme
+    NEWRELIC_KEY: changeme
+    SMTP_USER_NAME: recus@nouvellevie.com
+    SMTP_PASSWORD: changeme
