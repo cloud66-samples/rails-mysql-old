@@ -10,3 +10,8 @@ production: # Environment
         target: any # Hook fields
         execute: true
         apply_during: build_only
+    after_symlink:
+    - inline: |
+        echo "Testing if this works"
+      target: rails
+      execute: true
