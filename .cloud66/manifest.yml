@@ -12,5 +12,8 @@ rails:
         NEWRELIC_KEY: changeme
         SMTP_USER_NAME: recus@nouvellevie.com
         SMTP_PASSWORD: changeme
-    mysql:
-        version: 8.0
+mysql:
+    version: 8.0
+glusterfs:
+    configuration:
+        operating_system: ubuntu1604
