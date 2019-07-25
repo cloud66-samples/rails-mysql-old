@@ -14,4 +14,4 @@ rails:
         SMTP_PASSWORD: changeme
 mysql:
     configuration:
-        version: 8.0
+        version: 5.7
