@@ -16,3 +16,4 @@ rails:
 mysql:
     configuration:
         version: 5.7
+        engine: 'percona'
