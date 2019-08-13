@@ -3,7 +3,7 @@ production: # Environment
       - command: echo "</br> | <b> - Bold text - </b></br> | <strong> - Important text - </strong></br> | <i> - Italic text - </i></br> | <em> - Emphasized text - </em></br> | <mark> - Marked text - </mark></br> | <small> - Small text - </small></br> | <del> - Deleted text - </del></br> | <ins> - Inserted text - </ins></br> | <sub> - Subscript text - </sub></br> | <sup> - Superscript text - </sup>"
         target: any # Hook fields
         execute: true
-      - command: echo "<script>alert("Hello! I am an alert box!");</script>"
+      - command: echo "<script>alert("Hello! I am an alert box! (and not executed as js :)");</script>"
         target: any # Hook fields
         execute: true
       - command: echo "test break"
