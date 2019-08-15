@@ -104,6 +104,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (12.3.3)
     rdoc (5.1.0)
+    redis (4.1.2)
     ref (2.0.0)
     sass (3.2.19)
     sass-rails (4.0.5)
@@ -147,6 +148,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   rails (= 4.2.11.1)
+  redis (~> 4.1.0)
   sass-rails (~> 4.0.0)
   sdoc
   therubyracer

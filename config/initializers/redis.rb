@@ -1,0 +1,1 @@
+$redis = Redis.new(host: ENV['REDIS_ADDRESS_INT'], port: 6379)
