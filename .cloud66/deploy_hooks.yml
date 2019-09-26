@@ -10,3 +10,8 @@ production: # Environment
         target: any # Hook fields
         execute: true
         apply_during: build_only
+    after_checkout: # Hook point
+      - source: /.cloud66/scripts/before_assets_precompile.rb
+        destination: /tmp/before_assets_precompile.rb
+        target: rails
+        execute: true
