@@ -1,20 +1,21 @@
-staging:
-    rails:
-        configuration:
-            ruby_version: 2.1.5
-
-production:
-    rails:
-        configuration:
-            ruby_version: 2.1.5
-    environment_variables:
-        DATABASE_HOST: changeme
-        DATABASE_USERNAME: changeme
-        DATABASE_PASSWORD: changeme
-        HOST_PROTOCOL: https
-        HOST_NAME: dons.nouvellevie.com
-        STRIPE_SECRET_KEY: changeme
-        STRIPE_PUBLISHABLE_KEY: changeme
-        NEWRELIC_KEY: changeme
-        SMTP_USER_NAME: recus@nouvellevie.com
-        SMTP_PASSWORD: changeme
+rails:
+  servers:
+  - server:
+      unique_name: app
+      size: t3.large
+      region: ap-south-1
+      vendor: aws
+mysql:
+  servers:
+  - server:
+      unique_name: db
+      size: t3.large
+      region: ap-south-1
+      vendor: aws
+redis:
+  servers:
+  - server:
+      unique_name: redis
+      size: t3.large
+      region: ap-south-1
+      vendor: aws
