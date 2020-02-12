@@ -16,6 +16,7 @@ production:
     rails: 
         configuration:
             node_version: '10'
+            ruby_version: '2.7.0'
         server: 
             extra_packages: 
                 - atop
