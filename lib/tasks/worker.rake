@@ -12,8 +12,6 @@ namespace :test do
 			next if signal == "BUS"
 			next if signal == "SEGV"
 			next if signal == "VTALRM"
-			next if signal == "KILL"
-			next if signal == "STOP"
 			prepend_handler(signal) do |old|
 				Thread.new do
 					message = "Caught the following signal: #{signal}"
