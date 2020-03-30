@@ -6,7 +6,9 @@
 
 <br><br>
 Rails Stack Path: <%= @rails_stack_path %><br>
-TEST_ENV <%= ENV['TEST_ENV'] %><br>
 
-
-
+<%= ENV.each do |key, value| %>
+<p>Key: <code><%= key %></code></p>
+<p>Value: <code><%= value %></code></p>
+<br>
+<% end %>
