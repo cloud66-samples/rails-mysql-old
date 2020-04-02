@@ -15,12 +15,25 @@ namespace :test do
 			next if signal == "KILL"
 			next if signal == "STOP"
 			prepend_handler(signal) do |old|
-				Thread.new do
-					message = "Caught the following signal: #{signal}"
-					Rails.logger.info(message)
-					puts(message)
-				end.join
-				old.call
+				log_from_signal_handler("Caught the following signal: #{signal}")
+
+				signals_without_sleep = ["EXIT"]
+				if signals_without_sleep.include?(signal)
+					log_from_signal_handler("Skipping sleep for SIG#{signal}")
+				else
+					sleep_seconds = 5
+
+					log_from_signal_handler("Sleeping for #{sleep_seconds} seconds")
+					sleep(sleep_seconds)
+				end
+
+				signals_to_ignore = ["QUIT", "EXIT"]
+				if signals_to_ignore.include?(signal)
+					log_from_signal_handler("Ignoring SIG#{signal}")
+				else
+					log_from_signal_handler("Calling SIG#{signal}")
+					old.call
+				end
 			end
 		end
 
@@ -30,5 +43,12 @@ namespace :test do
 			puts(message)
 			sleep(5)
 		end
+	end
+
+	def log_from_signal_handler(message)
+		Thread.new do
+			Rails.logger.info(message)
+			puts(message)
+		end.join
 	end
 end
