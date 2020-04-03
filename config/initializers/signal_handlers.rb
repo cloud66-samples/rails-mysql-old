@@ -20,6 +20,7 @@ Signal.list.each do |signal, signal_number|
 	next if signal == "VTALRM"
 	next if signal == "KILL"
 	next if signal == "STOP"
+	next if signal == "EXIT"
 	prepend_handler(signal) do |old|
 		log_from_signal_handler("Caught the following signal: #{signal}")
 
