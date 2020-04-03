@@ -27,7 +27,7 @@ namespace :test do
 					sleep(sleep_seconds)
 				end
 
-				signals_to_ignore = ["QUIT", "EXIT"]
+				signals_to_ignore = ["QUIT"]
 				if signals_to_ignore.include?(signal)
 					log_from_signal_handler("Ignoring SIG#{signal}")
 				else
