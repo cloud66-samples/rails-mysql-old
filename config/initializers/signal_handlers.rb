@@ -22,23 +22,23 @@ Signal.list.each do |signal, signal_number|
 	next if signal == "STOP"
 	next if signal == "EXIT"
 	prepend_handler(signal) do |old|
-		log_from_signal_handler("Caught the following signal: #{signal}")
+		log_from_signal_handler("[PID: #{$$}] [PN: #{$0}] Caught the following signal: #{signal}")
 
 		signals_without_sleep = []
 		if signals_without_sleep.include?(signal)
-			log_from_signal_handler("Skipping sleep for SIG#{signal}")
+			log_from_signal_handler("[PID: #{$$}] [PN: #{$0}] Skipping sleep for SIG#{signal}")
 		else
 			sleep_seconds = 2
 
-			log_from_signal_handler("Sleeping for #{sleep_seconds} seconds")
+			log_from_signal_handler("[PID: #{$$}] [PN: #{$0}] Sleeping for #{sleep_seconds} seconds")
 			sleep(sleep_seconds)
 		end
 
 		signals_to_ignore = []
 		if signals_to_ignore.include?(signal)
-			log_from_signal_handler("Ignoring SIG#{signal}")
+			log_from_signal_handler("[PID: #{$$}] [PN: #{$0}] Ignoring SIG#{signal}")
 		else
-			log_from_signal_handler("Calling SIG#{signal}")
+			log_from_signal_handler("[PID: #{$$}] [PN: #{$0}] Calling SIG#{signal}")
 			old.call
 		end
 	end
