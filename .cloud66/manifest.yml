@@ -7,6 +7,9 @@ production:
     rails:
         configuration:
             ruby_version: 2.1.5
+        server:
+            unique_name: regser
+            address:
     environment_variables:
         DATABASE_HOST: changeme
         DATABASE_USERNAME: changeme
