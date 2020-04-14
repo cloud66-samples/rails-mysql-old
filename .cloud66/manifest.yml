@@ -9,7 +9,7 @@ production:
             ruby_version: 2.1.5
         server:
             unique_name: regser
-            address:
+            address: 64.227.38.43
     environment_variables:
         DATABASE_HOST: changeme
         DATABASE_USERNAME: changeme
