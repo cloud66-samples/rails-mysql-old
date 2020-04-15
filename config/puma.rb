@@ -12,6 +12,9 @@ threads min_threads_count, max_threads_count
 #
 port        ENV.fetch("PORT") { 3000 }
 
+# specify how many workers to launch
+workers        ENV.fetch("WORKERS") { 0 }
+
 # Specify what to bind to
 bind ENV.fetch("BIND") { "unix:///tmp/web_server.sock" }
 
