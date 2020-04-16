@@ -15,6 +15,8 @@ port        ENV.fetch("PORT") { 3000 }
 # specify how many workers to launch
 workers        ENV.fetch("WORKERS") { 0 }
 
+directory ENV.fetch("STACK_PATH")
+
 # Specify what to bind to
 bind ENV.fetch("BIND") { "unix:///tmp/web_server.sock" }
 
