@@ -1,1 +1,1 @@
-raise "STOPPING APP FROM LOADING" unless $0.include?("unicorn")
+raise "STOPPING APP FROM LOADING" if $0.include?("unicorn")
