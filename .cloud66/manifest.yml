@@ -16,6 +16,7 @@ production:
     rails: 
         configuration:
             node_version: '10'
+            health: 'default'
         server: 
             extra_packages: 
                 - atop
