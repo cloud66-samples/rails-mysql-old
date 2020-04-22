@@ -40,7 +40,10 @@ pidfile ENV.fetch("PIDFILE") { "/tmp/web_server.pid" }
 # before forking the application. This takes advantage of Copy On Write
 # process behavior so workers use less memory.
 #
-preload_app!
+# preload_app!
+
+# zero downtime deployment: https://github.com/puma/puma/blob/master/docs/deployment.md
+prune_bundler
 
 # Allow puma to be restarted by `rails restart` command.
 # plugin :tmp_restart

@@ -13,6 +13,9 @@ staging:
                 - chrony
                 
 production:
+    procfile_metadata:
+        custom_web:
+            restart_signal: 'usr1'
     rails: 
         configuration:
             node_version: '10'
