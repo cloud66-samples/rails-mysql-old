@@ -8,6 +8,7 @@ production:
     rails:
         configuration:
             ruby_version: 2.1.5
+            operating_system: Ubuntu1604
     environment_variables:
         DATABASE_HOST: changeme
         DATABASE_USERNAME: changeme
