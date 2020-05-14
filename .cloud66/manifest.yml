@@ -2,12 +2,12 @@ staging:
     rails:
         configuration:
             ruby_version: 2.1.10
-            operating_system: Ubuntu1604
 
 production:
     rails:
         configuration:
-            ruby_version: 2.1.5
+            ruby_version: 2.1.10
+            operating_system: Ubuntu1604
     environment_variables:
         DATABASE_HOST: changeme
         DATABASE_USERNAME: changeme
