@@ -2,7 +2,7 @@ staging:
     rails:
         configuration:
             ruby_version: 2.1.10
-            operating_system: Ubuntu1604
+            operating_system: Ubuntu1804
 
 production:
     rails:
