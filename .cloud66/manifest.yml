@@ -2,6 +2,7 @@ development:
     rails: 
         configuration:
             ruby_version: 2.2.2
+            operating_system: "Ubuntu1604"
         server: 
             extra_packages: 
                 - atop
@@ -11,6 +12,7 @@ staging:
     rails: 
         configuration:
             ruby_version: 2.2.2
+            operating_system: "Ubuntu1604"
         server: 
             extra_packages: 
                 - atop
@@ -25,6 +27,7 @@ production:
             node_version: '10'
             health: 'default'
             ruby_version: 2.2.2
+            operating_system: "Ubuntu1604"
         server: 
             extra_packages: 
                 - atop
