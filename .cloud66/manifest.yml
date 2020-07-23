@@ -19,6 +19,7 @@ production:
     rails: 
         configuration:
             node_version: '10'
+            operating_system: "Ubuntu1604"
             health: 'default'
         server: 
             extra_packages: 
