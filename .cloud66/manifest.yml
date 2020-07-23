@@ -20,6 +20,8 @@ production:
         configuration:
             node_version: '10'
             operating_system: "Ubuntu1604"
+            nginx:
+                version: "1.18"
             health: 'default'
         server: 
             extra_packages: 
