@@ -5,6 +5,9 @@ staging:
             node_version: "6"
 
 production:
+    procfile_metadata:
+        worker:
+            stop_sequence: int, 3600, term, 10, kill
     rails:
         configuration:
             ruby_version: 2.1.5
