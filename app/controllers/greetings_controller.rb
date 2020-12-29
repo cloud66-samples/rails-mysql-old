@@ -12,7 +12,11 @@ class GreetingsController < ApplicationController
 		@balls = @balls + "#{header[0]}: #{header[1]} </br>"
 	end
 	@balls = @balls + "</br>"
-	  
+	ENV.each_pair do |key, value|
+		@balls = @balls + "#{key}: #{value} </br>"
+	end
+	@balls = @balls + "</br>"
+
 	  
 	Rails.cache.write("test", DateTime.now.to_i.to_s)  
 
