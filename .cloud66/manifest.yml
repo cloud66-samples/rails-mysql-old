@@ -5,6 +5,7 @@ production:
                 unique_name: app
                 subnet_id: subnet-6b46ff0e
                 vendor: aws
+                key_name: Default
                 region: us-west-2
                 size: t2.medium
         configuration:
@@ -15,5 +16,6 @@ production:
                 unique_name: db
                 subnet_id: subnet-6b46ff0e
                 vendor: aws
+                key_name: Default
                 region: us-west-2
                 size: t2.medium
