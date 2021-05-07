@@ -5,6 +5,7 @@ rails:
       size: t3.large
       region: ap-south-1
       vendor: aws
+      cloud_key: Images
 mysql:
   servers:
     server:
@@ -12,10 +13,11 @@ mysql:
       size: t3.large
       region: ap-south-1
       vendor: aws
+      cloud_key: Images
 redis:
   servers:
     server:
       unique_name: redis
       size: t3.large
       region: ap-south-1
-      vendor: aws
+      cloud_key: Images
