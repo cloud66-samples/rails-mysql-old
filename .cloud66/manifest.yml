@@ -1,24 +1,35 @@
-rails:
-  servers:
-    server:
-      unique_name: app
-      size: t3a.medium
-      region: us-east-1
-      vendor: aws
-      key_name: Images
-mysql:
-  servers:
-    server:
-      unique_name: db
-      size: t3a.medium
-      region: us-east-1
-      vendor: aws
-      key_name: Images
-redis:
-  servers:
-    server:
-      unique_name: redis
-      size: t3a.medium
-      vendor: aws
-      region: us-east-1
-      key_name: Images
+staging:
+  rails:
+    servers:
+      server: &rails_server
+        unique_name: app
+        size: t3.large
+        region: ap-south-1
+        vendor: aws
+  mysql:
+    servers:
+      server: &mysql_server
+        unique_name: db
+        size: t3.large
+        region: ap-south-1
+        vendor: aws
+  redis:
+    servers:
+      server: &redis_server
+        unique_name: redis
+        size: t3.large
+        region: ap-south-1
+        vendor: aws
+production:
+  rails:
+    servers:
+      server:
+        << *rails_server
+  mysql:
+    servers:
+      server:
+        << *mysql_server
+  redis:
+    servers:
+      server:
+        << *redis_server
