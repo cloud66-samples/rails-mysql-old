@@ -19,5 +19,6 @@ redis:
     server:
       unique_name: redis
       size: t3.large
+      vendor: aws
       region: ap-south-1
       cloud_key: Images
