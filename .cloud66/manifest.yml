@@ -24,12 +24,12 @@ production:
   rails:
     servers:
       server:
-        << *rails_server
+        <<: *rails_server
   mysql:
     servers:
       server:
-        << *mysql_server
+        <<: *mysql_server
   redis:
     servers:
       server:
-        << *redis_server
+        <<: *redis_server
