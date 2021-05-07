@@ -2,23 +2,23 @@ rails:
   servers:
     server:
       unique_name: app
-      size: t3.large
-      region: ap-south-1
+      size: t3a.medium
+      region: us-east-1
       vendor: aws
       key_name: Images
 mysql:
   servers:
     server:
       unique_name: db
-      size: t3.large
-      region: ap-south-1
+      size: t3a.medium
+      region: us-east-1
       vendor: aws
       key_name: Images
 redis:
   servers:
     server:
       unique_name: redis
-      size: t3.large
+      size: t3a.medium
       vendor: aws
-      region: ap-south-1
+      region: us-east-1
       key_name: Images
