@@ -6,6 +6,7 @@ staging:
         size: t3.large
         region: ap-south-1
         vendor: aws
+        key_name: Images
   mysql:
     servers:
       server: &mysql_server
@@ -13,6 +14,7 @@ staging:
         size: t3.large
         region: ap-south-1
         vendor: aws
+        key_name: Images
   redis:
     servers:
       server: &redis_server
@@ -20,6 +22,7 @@ staging:
         size: t3.large
         region: ap-south-1
         vendor: aws
+        key_name: Images
 production:
   rails:
     servers:
