@@ -1,20 +1,20 @@
 rails:
   servers:
-  - server:
+    server:
       unique_name: app
       size: t3.large
       region: ap-south-1
       vendor: aws
 mysql:
   servers:
-  - server:
+    server:
       unique_name: db
       size: t3.large
       region: ap-south-1
       vendor: aws
 redis:
   servers:
-  - server:
+    server:
       unique_name: redis
       size: t3.large
       region: ap-south-1
