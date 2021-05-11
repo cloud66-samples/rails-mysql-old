@@ -30,9 +30,7 @@ production:
         <<: *rails_server
   mysql:
     servers:
-      server:
-        <<: *mysql_server
+      server: external
   redis:
     servers:
-      server:
-        <<: *redis_server
+      server: external
